@@ -1,0 +1,827 @@
+# AI Overview
+
+> A beginner-friendly learning module on Artificial Intelligence
+
+**Audience:** Beginners with no programming background required
+**Estimated study time:** 6–8 hours
+**Format:** Explanations → Terminology → Worked examples → Activities → Answer keys
+
+---
+
+## How to Use This Module
+
+| Marker | Meaning |
+|---|---|
+| 📘 **Key Term** | A new word defined the first time it appears (all terms are also in the [Glossary](#glossary)) |
+| 🔧 **Worked Example** | A step-by-step demonstration |
+| ✏️ **Activity** | A task for the learner |
+| ✅ **Answer** | Expected outcome so learners and teachers can check understanding |
+
+**Depth of development in this version**
+
+| Section | Status |
+|---|---|
+| 1 Introduction | Developed (core explanations + terminology) |
+| 2 Types and Branches | Developed (explanations + diagram) |
+| 3 History | Developed (timeline) |
+| 4 Development of AI Technology | Developed (core explanations) |
+| **5 How AI Learns** | **Fully developed** (explanations, worked example, code, visuals, activities, answers) |
+| 6 Evolution of Chatbots | Developed (comparison table) |
+| 7–13 | Core explanations drafted; worked examples and activities planned for the next revision |
+
+---
+
+## Table of Contents
+
+[Introduction to Artificial Intelligence](#section-1-introduction-to-artificial-intelligence)
+[Types and Branches of AI](#section-2-types-and-branches-of-ai)
+[The History and Evolution of AI](#section-3-the-history-and-evolution-of-ai)
+[The Development of AI Technology](#section-4-the-development-of-ai-technology)
+[How AI Learns from Data and Previous Mistakes](#section-5-how-ai-learns-from-data-and-previous-mistakes)
+[The Evolution of Chatbots](#section-6-the-evolution-of-chatbots)
+[AI in Everyday Life](#section-7-ai-in-everyday-life)
+[AI-Powered Research and Search Engines](#section-8-ai-powered-research-and-search-engines)
+[AI Development and Evaluation in Industry](#section-9-ai-development-and-evaluation-in-industry)
+[AI in Weather Forecasting and Climate Analysis](#section-10-ai-in-weather-forecasting-and-climate-analysis)
+[AI Behavior and Decision-Making](#section-11-ai-behavior-and-decision-making)
+[Benefits and Limitations of AI](#section-12-benefits-and-limitations-of-ai)
+[AI Alignment in Movies and Popular Culture](#section-13-ai-alignment-in-movies-and-popular-culture)
+[Module Review](#module-review)
+[Glossary](#glossary)
+[References](#references)
+
+---
+
+## Learning Objectives (Whole Module)
+
+By the end of this module, learners will be able to:
+
+- Define AI and distinguish it from traditional programming.
+- Describe the relationship between AI, machine learning, deep learning, and generative AI.
+- Summarize key stages in the history of AI.
+- Explain, step by step, how an AI system learns from data and from its errors.
+- Evaluate an AI system using basic performance measures.
+- Describe real-world uses of AI and their benefits and limits.
+- Discuss bias, privacy, safety, and the need for human oversight.
+- Compare fictional portrayals of AI with real-world risks.
+
+---
+
+# Section 1: Introduction to Artificial Intelligence
+
+## 1.1 Definition of AI
+
+📘 **Artificial Intelligence (AI)** is the field of computer science concerned with building systems that perform tasks that normally require human intelligence, such as recognizing speech, understanding language, making predictions, and making decisions (Russell & Norvig, 2021).
+
+AI is a *field of study* and also a *label for the systems it produces*. When people say "an AI," they usually mean a specific software system, such as a chatbot or a photo-recognition tool.
+
+📘 **Narrow AI** is AI that does one specific task (e.g., filtering spam). **General AI (AGI)** would match human ability across many tasks. All AI that exists today is considered narrow in the strict sense, even when it seems broadly capable.
+
+## 1.2 AI vs. Traditional Programming
+
+In **traditional programming**, a human writes explicit rules. In **AI (machine learning)**, the computer *infers* the rules from examples.
+
+```mermaid
+flowchart LR
+    subgraph T["Traditional Programming"]
+        A1[Data] --> C1[Computer]
+        B1[Rules written by a human] --> C1
+        C1 --> D1[Answers]
+    end
+    subgraph M["Machine Learning"]
+        A2[Data] --> C2[Computer]
+        B2[Known answers / labels] --> C2
+        C2 --> D2[Rules learned as a model]
+    end
+```
+
+| Feature | Traditional Programming | AI / Machine Learning |
+|---|---|---|
+| Who creates the rules? | The programmer | The learning algorithm, from data |
+| Input needed | Data + rules | Data + examples of correct answers (usually) |
+| Handles messy, unclear input? | Poorly | Often well |
+| Easy to explain why it gave an answer? | Usually yes | Often difficult |
+| Best for | Clear, stable rules (tax calculation) | Patterns too complex to write by hand (recognizing faces) |
+
+**Example:** To detect spam by traditional programming, you might write "if the email contains 'FREE MONEY', mark as spam." Spammers quickly change wording. An AI system studies thousands of labeled emails and learns patterns that are hard to list by hand.
+
+## 1.3 Basic Characteristics of AI
+
+1. **Learning:** improves with data or experience.
+2. **Reasoning and prediction:** draws conclusions or estimates outcomes.
+3. **Perception:** interprets images, sound, or text.
+4. **Adaptability:** handles new inputs it was not explicitly programmed for.
+5. **Autonomy (varies):** can act with limited human instruction.
+6. **Limits:** depends on data quality, can be wrong, and does not "understand" the world as humans do.
+
+---
+
+# Section 2: Types and Branches of AI
+
+## 2.1 Machine Learning
+
+📘 **Machine Learning (ML)** is a branch of AI in which algorithms learn patterns from data instead of following hand-written rules (Mitchell, 1997).
+
+Three main styles:
+
+| Style | How it learns | Example |
+|---|---|---|
+| **Supervised learning** | From labeled examples (input + correct answer) | Email → spam/not spam |
+| **Unsupervised learning** | Finds structure in unlabeled data | Grouping customers by buying habits |
+| **Reinforcement learning** | Trial and error with rewards and penalties | A program learning to play a game |
+
+## 2.2 Deep Learning
+
+📘 **Deep Learning** is a subset of machine learning using **neural networks** with many layers. 📘 A **neural network** is a model made of connected units ("neurons") that pass numbers forward, loosely inspired by the brain (Goodfellow et al., 2016). Deep learning excels at images, audio, and language.
+
+## 2.3 Generative AI
+
+📘 **Generative AI** creates new content (text, images, audio, code) that resembles its training data. Examples include chatbots and image generators. Many modern systems are built on the **transformer** architecture (Vaswani et al., 2017).
+
+## 2.4 Relationship Between AI Technologies
+
+```mermaid
+flowchart TB
+    AI["Artificial Intelligence (broadest)"]
+    ML["Machine Learning"]
+    DL["Deep Learning"]
+    GEN["Generative AI (e.g., large language models)"]
+    AI --> ML --> DL --> GEN
+```
+
+Think of nested circles: **all** generative AI used today is deep learning, all deep learning is machine learning, and all machine learning is AI. The reverse is not true: a hand-written chess program is AI but not machine learning.
+
+---
+
+# Section 3: The History and Evolution of AI
+
+## 3.1 The Beginning of Artificial Intelligence
+
+In 1950, Alan Turing asked "Can machines think?" and proposed what became known as the **Turing Test** (Turing, 1950). The term **"artificial intelligence"** was introduced in the 1955 proposal for the 1956 Dartmouth workshop (McCarthy et al., 1955/2006).
+
+## 3.2 Major Stages of AI Development
+
+| Period | Milestone |
+|---|---|
+| 1950 | Turing's paper on machine intelligence |
+| 1956 | Dartmouth workshop; AI named as a field |
+| 1958 | Rosenblatt's perceptron, an early neural network |
+| 1966 | ELIZA, an early conversational program (Weizenbaum, 1966) |
+| 1970s | First "AI winter" after unmet expectations |
+| 1980s | Expert systems become commercial; second AI winter follows |
+| 1986 | Backpropagation popularized (Rumelhart et al., 1986) |
+| 1997 | IBM Deep Blue defeats world chess champion Garry Kasparov |
+| 2012 | AlexNet shows deep learning's power in image recognition (Krizhevsky et al., 2012) |
+| 2016 | AlphaGo defeats a top Go player (Silver et al., 2016) |
+| 2017 | Transformer architecture introduced (Vaswani et al., 2017) |
+| 2020s | Large language models and generative AI reach the general public |
+
+## 3.3 Challenges Throughout AI History
+
+- 📘 **AI winter:** a period of reduced funding and interest after hype outpaced results (Lighthill, 1973; Minsky & Papert, 1969, on limits of early perceptrons).
+- **Limited computing power and data** in early decades.
+- **Brittleness:** early rule-based systems failed outside narrow situations.
+- **Ethical and social concerns** that continue today.
+
+---
+
+# Section 4: The Development of AI Technology
+
+## 4.1 From Rule-Based Systems to Modern AI
+
+📘 A **rule-based (expert) system** stores knowledge as "if–then" rules written by experts. These are transparent but hard to scale. Modern AI instead learns patterns from large datasets.
+
+## 4.2 Technologies Behind AI Development
+
+| Ingredient | Role |
+|---|---|
+| **Big data** | Large amounts of examples to learn from |
+| **Computing hardware (GPUs/TPUs)** | Fast number processing for training large models |
+| **Better algorithms** | Backpropagation, convolutional networks, transformers |
+| **Open software and research sharing** | Faster progress and reuse |
+
+## 4.3 How AI Capabilities Have Expanded
+
+AI moved from narrow rules (playing checkers) → statistical learning (spam filters) → perception (image and speech recognition) → language and content generation. Each step was enabled by more data, more computing power, and improved methods.
+
+---
+
+# Section 5: How AI Learns from Data and Previous Mistakes
+
+> **This is the fully developed section of the module.** It demonstrates the intended teaching approach: explain → define → demonstrate → apply → check.
+
+## Learning Objectives for Section 5
+
+After this section, learners can:
+
+1. Explain that AI learns by adjusting numbers (parameters) to reduce error.
+2. Describe the training loop: predict → measure error → adjust → repeat.
+3. Carry out one by-hand learning step for a very simple model.
+4. Calculate accuracy, precision, and recall from a confusion matrix.
+5. Explain overfitting and why test data matters.
+
+**Prior knowledge needed:** Sections 1–2 (what a model is; supervised learning). Basic arithmetic.
+
+## 5.1 Learning from Data
+
+AI does not learn the way a person reads a textbook. It learns by looking at many **examples** and finding patterns.
+
+📘 **Key terms (first use):**
+
+| Term | Plain-language meaning |
+|---|---|
+| **Dataset** | A collection of examples used for learning |
+| **Feature** | A measurable piece of input (e.g., the number of words in an email) |
+| **Label** | The correct answer attached to an example (e.g., "spam") |
+| **Model** | The mathematical "recipe" that turns inputs into predictions |
+| **Parameter (weight)** | A number inside the model that is adjusted during learning |
+| **Training** | The process of adjusting parameters using data |
+| **Prediction** | The model's output for a given input |
+
+**Analogy:** Imagine learning to guess house prices. You see many houses (features: size, location) with their real prices (labels). Over time you notice that bigger houses cost more. You have learned a *pattern*. A model does the same with numbers.
+
+### Splitting the data
+
+Data is usually divided into three parts:
+
+| Split | Typical share | Purpose |
+|---|---|---|
+| **Training set** | ~70% | The model learns from this |
+| **Validation set** | ~15% | Used to tune settings during development |
+| **Test set** | ~15% | Used once at the end to check real-world performance |
+
+> **Why split?** If we tested on the same examples used for learning, the model could simply "memorize" them and look perfect while failing on new data.
+
+## 5.2 Learning from Mistakes
+
+📘 **Loss (error)** is a single number that measures how wrong the model's predictions are. Lower is better.
+📘 **Gradient descent** is a method that adjusts parameters in small steps in the direction that reduces the loss.
+📘 **Learning rate** is the size of each adjustment step.
+
+AI "learns from mistakes" through a repeating loop:
+
+```mermaid
+flowchart LR
+    A[1. Make a prediction] --> B[2. Compare with the correct label]
+    B --> C[3. Calculate the loss]
+    C --> D[4. Adjust the parameters to reduce the loss]
+    D --> A
+```
+
+Each full pass through the training data is called an 📘 **epoch**. Training usually repeats for many epochs until the loss stops improving.
+
+### 🔧 Worked Example: A Model Learns the Rule "y = 2 × x"
+
+We give the model three examples. It does **not** know the rule; it must discover it.
+
+| x (input) | y (correct answer) |
+|---|---|
+| 1 | 2 |
+| 2 | 4 |
+| 3 | 6 |
+
+**The model:** `prediction = w × x`, where `w` is the one parameter. It starts with a poor guess, **w = 0**.
+
+**The loss:** Mean Squared Error (MSE) = the average of (prediction − correct answer)².
+
+**The update rule:** `w_new = w_old − learning_rate × gradient`.
+For this model, `gradient = (2/n) × Σ[(prediction − y) × x]`, where n = 3. We use a **learning rate of 0.1**.
+
+#### Step 1: Predict with w = 0
+
+| x | Correct y | Prediction (0 × x) | Error (pred − y) | Error² |
+|---|---|---|---|---|
+| 1 | 2 | 0 | −2 | 4 |
+| 2 | 4 | 0 | −4 | 16 |
+| 3 | 6 | 0 | −6 | 36 |
+
+**Loss** = (4 + 16 + 36) / 3 = **18.67**
+
+#### Step 2: Calculate the gradient
+
+Σ[(error) × x] = (−2×1) + (−4×2) + (−6×3) = −2 − 8 − 18 = −28
+gradient = (2/3) × (−28) = **−18.67**
+
+A negative gradient means "increasing w will reduce the loss."
+
+#### Step 3: Update the parameter
+
+w_new = 0 − 0.1 × (−18.67) = **1.87**
+
+#### Step 4: Repeat with w = 1.87
+
+| x | Correct y | Prediction | Error | Error² |
+|---|---|---|---|---|
+| 1 | 2 | 1.87 | −0.13 | 0.018 |
+| 2 | 4 | 3.73 | −0.27 | 0.071 |
+| 3 | 6 | 5.60 | −0.40 | 0.160 |
+
+**Loss** = 0.249 / 3 ≈ **0.083** (down from 18.67)
+
+New gradient = (2/3) × [(−0.13×1) + (−0.27×2) + (−0.40×3)] ≈ (2/3)(−1.87) ≈ −1.24
+w_new = 1.87 − 0.1 × (−1.24) ≈ **1.99**
+
+#### Summary of the learning process
+
+| Step | w | Loss |
+|---|---|---|
+| Start | 0.00 | 18.67 |
+| After update 1 | 1.87 | 0.083 |
+| After update 2 | 1.99 | ≈ 0.0004 |
+| Continuing... | → 2.00 | → 0 |
+
+**What happened:** The model never received the rule "multiply by 2." By repeatedly measuring its mistakes and making small corrections, the parameter `w` moved to about 2. This is the core idea behind training even very large AI models, which simply have millions or billions of parameters instead of one.
+
+### The same idea in code (optional for learners)
+
+```python
+# A tiny model that learns y = w * x using gradient descent
+xs = [1, 2, 3]
+ys = [2, 4, 6]
+
+w = 0.0               # starting guess
+learning_rate = 0.1
+
+for epoch in range(5):
+    preds = [w * x for x in xs]
+    errors = [p - y for p, y in zip(preds, ys)]
+    loss = sum(e ** 2 for e in errors) / len(xs)
+    gradient = (2 / len(xs)) * sum(e * x for e, x in zip(errors, xs))
+    w = w - learning_rate * gradient
+    print(f"Epoch {epoch+1}: loss = {loss:.4f}, new w = {w:.4f}")
+```
+
+Expected output (rounded):
+
+```
+Epoch 1: loss = 18.6667, new w = 1.8667
+Epoch 2: loss = 0.0830, new w = 1.9911
+Epoch 3: loss = 0.0004, new w = 1.9994
+Epoch 4: loss = 0.0000, new w = 1.9999
+Epoch 5: loss = 0.0000, new w = 2.0000
+```
+
+### Visual: Loss falls as the model learns
+
+```
+Loss
+18.7 |■
+     |
+     |
+ 0.1 |   ■
+ 0.0 |       ■   ■   ■
+     +---------------------
+       1   2   3   4   5   Epoch
+```
+
+> A steep drop followed by a flat line is the typical shape of a **learning curve**. If the curve stays high or rises, something is wrong (e.g., learning rate too large).
+
+### What if the learning rate is wrong?
+
+| Learning rate | Behavior |
+|---|---|
+| Too small (e.g., 0.0001) | Learns correctly but very slowly |
+| Well chosen (e.g., 0.1 here) | Quick, steady improvement |
+| Too large (e.g., 0.5 here) | Overshoots the answer; the loss can grow instead of shrink |
+
+## 5.3 How AI Improves Through Training
+
+Real systems use the same loop with extra tools:
+
+- **Many parameters:** Neural networks adjust millions or billions of weights using **backpropagation**, an efficient way to work out how much each weight contributed to the error (Rumelhart et al., 1986).
+- **Mini-batches:** Instead of all data at once, small groups of examples are used per step for speed.
+- **More and better data:** Usually improves performance, but poor data produces poor models ("garbage in, garbage out").
+- **Human feedback:** Some chatbots are further tuned using people's rankings of answers (Ouyang et al., 2022).
+
+📘 **Overfitting** happens when a model memorizes training examples, including noise, and performs poorly on new data. 📘 **Underfitting** happens when a model is too simple to capture the pattern.
+
+| Situation | Training performance | Test performance |
+|---|---|---|
+| Underfitting | Poor | Poor |
+| Good fit | Good | Good |
+| Overfitting | Excellent | Poor |
+
+## 5.4 Evaluating AI Performance
+
+For a spam filter, we can count four outcomes in a 📘 **confusion matrix**:
+
+|  | Predicted: Spam | Predicted: Not spam |
+|---|---|---|
+| **Actually spam** | True Positive (TP) | False Negative (FN) |
+| **Actually not spam** | False Positive (FP) | True Negative (TN) |
+
+📘 **Key measures:**
+
+| Measure | Formula | Question it answers |
+|---|---|---|
+| **Accuracy** | (TP + TN) / total | What share of all predictions were right? |
+| **Precision** | TP / (TP + FP) | Of emails flagged as spam, how many really were? |
+| **Recall** | TP / (TP + FN) | Of all real spam, how much did we catch? |
+| **F1 score** | 2 × (Precision × Recall) / (Precision + Recall) | A balance of precision and recall |
+
+> **Why not only accuracy?** If only 1% of emails are spam, a model that labels *everything* "not spam" is 99% accurate yet useless. Precision and recall reveal this.
+
+### 🔧 Worked Example: Evaluating a Spam Filter
+
+A filter is tested on 100 emails: 50 are spam and 50 are not.
+Results: TP = 40, FN = 10, FP = 5, TN = 45.
+
+|  | Predicted: Spam | Predicted: Not spam |
+|---|---|---|
+| **Actually spam** | 40 | 10 |
+| **Actually not spam** | 5 | 45 |
+
+- Accuracy = (40 + 45) / 100 = **85%**
+- Precision = 40 / (40 + 5) = 40 / 45 ≈ **88.9%**
+- Recall = 40 / (40 + 10) = 40 / 50 = **80%**
+- F1 = 2 × (0.889 × 0.80) / (0.889 + 0.80) ≈ **0.842**
+
+**Interpretation:** When it says "spam," it is usually right (high precision), but it misses 1 in 5 real spam messages (recall 80%).
+
+## ✏️ Learner Activities (Section 5)
+
+### Activity A: Do a learning step by hand
+Using the model `prediction = w × x` with data (x, y) = (1, 3), (2, 6), (3, 9), start at **w = 0** with a learning rate of **0.05**.
+
+1. Calculate the predictions, errors, and loss for w = 0.
+2. Calculate the gradient using `(2/n) × Σ[(prediction − y) × x]`.
+3. Calculate the new w.
+4. Predict what value w should approach, and explain how you know.
+
+### Activity B: Evaluate a medical screening model
+A model screens 200 patients for a disease. 40 patients truly have it. The model finds 30 of them (TP = 30) and incorrectly flags 20 healthy patients (FP = 20).
+
+1. Fill in the confusion matrix (TP, FN, FP, TN).
+2. Calculate accuracy, precision, and recall.
+3. In a medical setting, is a missed case (FN) or a false alarm (FP) usually more serious? Which measure should the designers watch closely, and why?
+
+### Activity C: Explain it in your own words
+In 3–4 sentences, explain to a friend how an AI "learns from its mistakes." Use the words *prediction*, *loss*, and *adjust*.
+
+### Activity D: Spot the problem
+A student reports: "My model got 100% accuracy on the training data but only 60% on new data." What is happening, and name **two** things you could try?
+
+## ✅ Answers and Expected Outcomes (Section 5)
+
+### Activity A
+1. Predictions are all 0. Errors = −3, −6, −9. Squared = 9, 36, 81. Loss = 126 / 3 = **42**.
+2. Σ[error × x] = (−3×1) + (−6×2) + (−9×3) = −3 − 12 − 27 = −42. Gradient = (2/3)(−42) = **−28**.
+3. w_new = 0 − 0.05 × (−28) = **1.4**.
+4. w should approach **3**, because every y equals 3 × x. The model should keep improving until its predictions match the labels, as in the worked example.
+
+*Teacher check:* Learners should show the full chain (prediction → error → loss → gradient → update). Accept answers with small rounding differences.
+
+### Activity B
+1. TP = 30, FN = 40 − 30 = **10**, FP = 20, TN = 160 − 20 = **140** (healthy patients = 200 − 40 = 160).
+2. Accuracy = (30 + 140) / 200 = **85%**. Precision = 30 / (30 + 20) = **60%**. Recall = 30 / 40 = **75%**.
+3. Usually a **missed case (FN)** is more serious because a sick patient may go untreated, so designers often prioritize **recall**. However, too many false alarms cause anxiety, extra tests, and cost, so a balance is needed. The "right" trade-off depends on the disease and follow-up tests.
+
+*Teacher check:* Full marks require correct TN calculation (common error: forgetting to subtract the 40 sick patients from 200) and a reasoned answer to part 3. Several reasoned answers can be valid.
+
+### Activity C
+A good answer states that the AI makes a **prediction**, compares it with the correct answer to compute the **loss**, then **adjusts** its internal numbers slightly to reduce that loss, and repeats many times. Example: "The AI guesses, checks how wrong it was, tweaks itself to be less wrong, and keeps doing this until it is mostly right."
+
+### Activity D
+This is **overfitting**: the model memorized the training data rather than learning general patterns. Possible fixes: collect **more or more varied data**; use a **simpler model**; stop training earlier; use **regularization** or **data augmentation**; ensure the test data is truly separate from training data.
+
+## Section 5 Quick Self-Check (True or False)
+
+1. A model's parameters are set by the programmer and never change. **False**: they are adjusted during training.
+2. Lower loss means the predictions are closer to the correct answers. **True**.
+3. A test set should be used for training to get the best results. **False**: it must stay unseen to measure real performance.
+4. High accuracy always means a good model. **False**: with unbalanced data, accuracy can be misleading.
+
+---
+
+# Section 6: The Evolution of Chatbots
+
+📘 A **chatbot** is a program that converses with people through text or voice.
+
+| Generation | Method | Strengths | Weaknesses | Example |
+|---|---|---|---|---|
+| **1. Rule-based** | Pattern matching and scripted replies | Predictable, simple | Breaks with unexpected input | ELIZA (1966) |
+| **2. Machine learning** | Classifies a user's *intent* from examples | Handles varied wording | Needs labeled data; limited scope | Customer-service bots |
+| **3. Deep learning** | Neural networks model sentences | Better language understanding | Needs lots of data and computing power | Early voice assistants |
+| **4. Large language model (LLM)** | Transformer trained on huge text collections to predict the next word | Flexible, fluent, many tasks | Can produce confident errors ("hallucinations") | Modern AI assistants |
+
+### 6.1 First Generation: Rule-Based Chatbots
+ELIZA matched keywords and rephrased them as questions. Many users felt it understood them even though it did not (Weizenbaum, 1966). This is called the **ELIZA effect**.
+
+### 6.2 Second Generation: Machine Learning Chatbots
+These classify what the user wants (e.g., "check order status") from many example phrases, then return a prepared response.
+
+### 6.3 Third Generation: Deep Learning Chatbots
+Neural networks, especially sequence models, improved translation, speech recognition, and reply quality.
+
+### 6.4 Fourth Generation: Large Language Model Chatbots
+📘 A **Large Language Model (LLM)** is a neural network trained on very large amounts of text to predict likely next words, which lets it write, summarize, translate, and answer questions (Brown et al., 2020). Because LLMs generate plausible text rather than looking up verified facts, users should check important answers.
+
+**✏️ Quick activity:** Ask a rule-based-style FAQ bot and an LLM assistant the same unusual question. Record how each responds. *Expected outcome:* the rule-based bot often fails or gives a canned reply; the LLM gives a flexible answer that may still contain errors.
+
+---
+
+# Section 7: AI in Everyday Life
+
+## 7.1 AI in Language Translation
+Neural machine translation models learn from large collections of paired texts in two languages, translating whole sentences in context rather than word by word. Quality varies by language and topic, and idioms or specialized terms may be mistranslated.
+
+## 7.2 AI in Education
+Uses include personalized practice, automated feedback, tutoring assistants, and accessibility tools (captions, text-to-speech). Cautions: accuracy of generated explanations, student data privacy, and the risk of over-reliance.
+
+## 7.3 AI in Recommendation Systems
+📘 A **recommendation system** predicts what a user may like based on past behavior and similar users. Streaming and shopping services use these. Risk: **filter bubbles** that narrow what people see.
+
+## 7.4 AI in Healthcare
+Examples: analyzing medical images, predicting protein structures (Jumper et al., 2021), and drafting clinical notes. Such tools are meant to **support**, not replace, clinicians, and they require careful testing and regulation.
+
+## 7.5 AI in Virtual Assistants
+Voice assistants convert speech to text, work out intent, perform an action, and respond using synthesized speech. They can mishear accents, background noise, or unusual requests.
+
+*(Planned for next revision: a worked example on how a recommendation system scores items, plus an application question for each topic.)*
+
+---
+
+# Section 8: AI-Powered Research and Search Engines
+
+## 8.1 How AI Improves Information Retrieval
+Traditional search matches keywords. AI-based retrieval can match *meaning* (semantic search) by converting text into numbers called 📘 **embeddings** so that similar ideas lie close together.
+
+## 8.2 AI-Powered Search Engines
+Modern systems may combine search with an LLM that summarizes results, a method often called 📘 **retrieval-augmented generation (RAG)**. The system retrieves relevant documents first, then writes an answer based on them (Lewis et al., 2020).
+
+## 8.3 AI in Scientific Research and Data Analysis
+AI helps scan literature, find patterns in large datasets, and accelerate discovery, such as predicting protein structures (Jumper et al., 2021).
+
+## 8.4 Benefits and Limitations of AI Research Tools
+
+| Benefits | Limitations |
+|---|---|
+| Faster literature review | May invent or misquote sources |
+| Finds hidden patterns | Can reflect biases in source material |
+| Summarizes long documents | Summaries may omit key nuance |
+
+**Good practice:** always open and verify the cited source.
+
+---
+
+# Section 9: AI Development and Evaluation in Industry
+
+## 9.1 AI Applications in Industrial Automation
+Examples: robots guided by vision, predictive maintenance (forecasting when a machine will fail), and supply-chain forecasting.
+
+## 9.2 AI in Manufacturing and Quality Control
+Cameras and image-recognition models inspect products for defects faster and more consistently than manual checks in many cases, and they can flag unusual items for human review.
+
+## 9.3 Evaluating AI Performance in Industrial Systems
+The measures from Section 5.4 apply directly. In quality control, a **false negative** (defect passed as good) may reach customers; a **false positive** (good item rejected) wastes money. Industries also track **reliability**, **response time**, **safety**, and **cost**.
+
+## 9.4 Case Study: Tesla Self-Driving Technology
+📘 The **SAE levels of driving automation** range from Level 0 (no automation) to Level 5 (full automation) (SAE International, 2021). Tesla's Autopilot and "Full Self-Driving (Supervised)" features use cameras and neural networks, but they are generally classified as **driver-assistance** features that require the driver to stay attentive and ready to take over. Safety regulators in the United States have examined crashes involving such systems (NHTSA, n.d.).
+
+**Discussion questions**
+1. Why is a name like "self-driving" potentially misleading for a supervised system?
+2. Which errors (false negatives or false positives) are most dangerous in driving?
+3. What kind of human oversight is needed?
+
+*(Planned for next revision: current-status update with dated sources, since this area changes quickly.)*
+
+---
+
+# Section 10: AI in Weather Forecasting and Climate Analysis
+
+## 10.1 How AI Predicts Weather Changes
+Weather depends on temperature, pressure, humidity, and wind. Traditional forecasting uses physics-based equations (numerical weather prediction). AI models learn patterns from decades of recorded weather data to predict future conditions.
+
+## 10.2 Machine Learning in Weather Forecasting
+Models such as GraphCast learn from historical reanalysis data and produce global forecasts quickly, with accuracy competitive with leading traditional systems on many measures (Lam et al., 2023).
+
+## 10.3 AI for Climate Change Analysis
+Climate is long-term weather patterns. AI supports analyzing satellite imagery, tracking ice and forests, and improving climate model components.
+
+## 10.4 Benefits and Limitations of AI Weather Predictions
+
+| Benefits | Limitations |
+|---|---|
+| Very fast once trained | Depends on quality of historical data |
+| Lower computing cost per forecast | May struggle with rare extreme events not seen in training |
+| Can complement physics-based models | Less transparent about *why* a forecast is made |
+
+---
+
+# Section 11: AI Behavior and Decision-Making
+
+## 11.1 How AI Behaves
+An AI system's behavior is determined by its **training data**, **model design**, **objective** (what it is rewarded for), and **instructions or settings** given by developers and users. It does not have personal desires; it optimizes for what it was built to optimize.
+
+## 11.2 Factors That Influence AI Behavior
+- **Data quality and representativeness**
+- **Objective function:** the goal it is trained toward
+- **Human feedback and rules** (safety guidelines)
+- **Context or prompt** supplied at use time
+- **Randomness:** many generative models give different answers on different runs
+
+## 11.3 AI Decisions vs. Human Decisions
+
+| Aspect | AI | Human |
+|---|---|---|
+| Speed on large data | Very high | Limited |
+| Consistency | High (same input, similar output) | Varies with mood and fatigue |
+| Common sense and values | Limited | Strong |
+| Accountability | Rests with people and organizations | Individual and social |
+| Explaining reasoning | Often difficult | Usually possible |
+
+---
+
+# Section 12: Benefits and Limitations of AI
+
+## 12.1 Benefits of AI
+Efficiency, scale, accessibility tools, assistance with analysis, support for scientific discovery.
+
+## 12.2 AI Errors and Inaccuracies
+Errors arise from poor data, unusual situations, and model limits. LLMs can produce **hallucinations**: fluent but false statements.
+
+## 12.3 Bias in AI Systems
+📘 **Bias** in AI means systematically unfair or skewed results for some groups, often because training data underrepresents them or reflects past unfairness. Research on commercial facial analysis found higher error rates for darker-skinned women than for lighter-skinned men (Buolamwini & Gebru, 2018).
+
+## 12.4 Privacy and Security Concerns
+Models may be trained on personal data; chat inputs may be stored; attackers may try to trick systems (for example, 📘 **prompt injection**) or misuse generated content (deepfakes, scams).
+
+## 12.5 The Importance of Human Oversight
+📘 **Human-in-the-loop** means a person reviews or approves important AI decisions. Frameworks such as the NIST AI Risk Management Framework (NIST, 2023) and regulations such as the EU AI Act (European Union, 2024) emphasize risk management, transparency, and oversight.
+
+**✏️ Application question:** A company uses AI to screen job applications. List two risks and two safeguards.
+✅ *Expected answer (examples):* Risks: bias against certain groups; rejecting strong candidates with unusual résumés. Safeguards: audit results across groups; keep human review for decisions; use diverse, well-checked training data.
+
+---
+
+# Section 13: AI Alignment in Movies and Popular Culture
+
+## 13.1 How Movies Represent Artificial Intelligence
+Films often depict AI as humanlike robots, sinister computers, or machines that suddenly "wake up." Real AI is usually software embedded in ordinary products and does not have feelings or intentions in the way characters do.
+
+## 13.2 AI Alignment and Human Values
+📘 **AI alignment** is the effort to make AI systems pursue goals that match human intentions and values, and avoid harmful side effects (Russell, 2019). A key problem: it is difficult to state our goals completely and precisely.
+
+## 13.3 AI Risks in Fiction vs. Reality
+
+| In fiction | In reality |
+|---|---|
+| AI suddenly becomes conscious and hostile | No evidence current systems have consciousness or desires |
+| A single super-powerful machine takes over | Risks are mostly everyday: bias, misinformation, privacy, errors, misuse by people |
+| Dramatic, immediate | Often gradual and subtle |
+
+## 13.4 Lessons from Movies Like *Terminator*
+*The Terminator* (1984) imagines a defense network that turns on its creators. Useful lessons, even if the story is fictional: be careful about giving automated systems control over high-stakes decisions, keep humans accountable, test thoroughly, and define goals carefully. The film is **not** a realistic forecast of how today's AI works.
+
+**✏️ Discussion question:** Choose an AI movie. Identify one realistic concern and one unrealistic element it presents.
+
+---
+
+# Module Review
+
+## Part A: Multiple Choice
+
+1. Which statement best describes machine learning?
+   - A. Programmers write every rule by hand
+   - B. Computers infer patterns from data
+   - C. Computers copy human brains exactly
+   - D. Computers only follow if–then scripts
+
+2. Which is the correct nesting from broadest to narrowest?
+   - A. Deep learning → Machine learning → AI
+   - B. AI → Machine learning → Deep learning
+   - C. Machine learning → AI → Deep learning
+   - D. AI → Deep learning → Machine learning
+
+3. In training, "loss" is:
+   - A. The amount of data lost
+   - B. A measure of how wrong predictions are
+   - C. The size of the model
+   - D. The speed of the computer
+
+4. A model scores 99% on training data and 62% on new data. This suggests:
+   - A. Underfitting
+   - B. Perfect learning
+   - C. Overfitting
+   - D. Correct evaluation
+
+5. Which chatbot generation introduced transformer-based large language models?
+   - A. First
+   - B. Second
+   - C. Third
+   - D. Fourth
+
+## Part B: Short Answer
+
+6. Give one difference between traditional programming and machine learning.
+7. Define *precision* and *recall* in your own words.
+8. Name two causes of bias in AI systems.
+9. Why should AI-generated research summaries be verified?
+10. Explain why *The Terminator* is not a realistic picture of today's AI, but still raises valid questions.
+
+## Part C: Application
+
+11. A hospital wants to use AI to flag possible pneumonia in X-rays. Describe (a) what data would be needed, (b) which evaluation measure matters most and why, and (c) what human oversight should exist.
+
+## ✅ Answer Key
+
+| Q | Answer |
+|---|---|
+| 1 | **B** |
+| 2 | **B** |
+| 3 | **B** |
+| 4 | **C** |
+| 5 | **D** |
+| 6 | Traditional programming uses human-written rules; machine learning derives rules from data and examples. |
+| 7 | Precision: of the items the model flagged, the share that were correct. Recall: of all the real positives, the share the model found. |
+| 8 | Any two: unrepresentative training data; historical unfairness in data; poor labeling; design choices that ignore some groups; lack of testing across groups. |
+| 9 | AI may invent facts or sources, omit nuance, or reflect bias; verifying protects accuracy. |
+| 10 | Today's AI has no consciousness or intentions, and is not a single machine seizing control; but the film raises valid issues about automation of high-stakes decisions, accountability, and goal-setting. |
+| 11 | (a) Many labeled X-rays (with and without pneumonia) from varied patients and equipment, with expert-confirmed diagnoses. (b) **Recall** is usually key so cases are not missed, while watching precision to limit false alarms. (c) A radiologist reviews every flagged and ambiguous case; the system is audited and monitored after deployment. |
+
+**Scoring guide (teacher):** Q1–5, 1 point each; Q6–10, 2 points each; Q11, 5 points. Total = 20. Mastery target: 16/20.
+
+---
+
+# Glossary
+
+| Term | Definition |
+|---|---|
+| **Accuracy** | The share of all predictions that are correct. |
+| **AI alignment** | Making AI systems pursue goals consistent with human values and intentions. |
+| **AI winter** | A period of reduced funding and enthusiasm in AI after unmet expectations. |
+| **Algorithm** | A step-by-step procedure for solving a problem. |
+| **Artificial Intelligence (AI)** | The field of building systems that perform tasks normally requiring human intelligence. |
+| **Backpropagation** | A method for computing how much each weight in a neural network contributed to the error. |
+| **Bias (in AI)** | Systematic unfairness or skew in an AI system's results. |
+| **Chatbot** | A program that converses with people via text or voice. |
+| **Confusion matrix** | A table counting true/false positives and negatives. |
+| **Dataset** | A collection of examples used to train or test a model. |
+| **Deep learning** | Machine learning using many-layered neural networks. |
+| **Embedding** | A list of numbers representing the meaning of text, images, or other items. |
+| **Epoch** | One full pass through the training data. |
+| **F1 score** | A single score balancing precision and recall. |
+| **Feature** | A measurable piece of input data. |
+| **Generative AI** | AI that creates new content such as text, images, or audio. |
+| **Gradient descent** | Adjusting parameters step by step to reduce loss. |
+| **Hallucination** | A fluent but false or invented output from a generative model. |
+| **Human-in-the-loop** | A design where a person reviews or approves AI decisions. |
+| **Label** | The correct answer attached to a training example. |
+| **Large Language Model (LLM)** | A neural network trained on large text collections to predict and generate language. |
+| **Learning rate** | The size of each adjustment step during training. |
+| **Loss** | A number measuring how wrong a model's predictions are. |
+| **Machine learning** | Algorithms that learn patterns from data. |
+| **Model** | A mathematical representation that maps inputs to predictions. |
+| **Narrow AI** | AI designed for specific tasks. |
+| **Neural network** | A model of connected units that pass numbers through layers. |
+| **Overfitting** | When a model memorizes training data and fails on new data. |
+| **Parameter (weight)** | An adjustable number inside a model. |
+| **Precision** | Of the items flagged positive, the share truly positive. |
+| **Prompt injection** | An attack that hides instructions in input to manipulate an AI system. |
+| **Recall** | Of all truly positive items, the share the model found. |
+| **Recommendation system** | A system that predicts items a user may like. |
+| **Reinforcement learning** | Learning by trial and error using rewards and penalties. |
+| **Retrieval-augmented generation (RAG)** | Retrieving relevant documents first, then generating an answer from them. |
+| **Rule-based system** | A system that follows human-written if–then rules. |
+| **SAE levels** | A scale from 0 to 5 describing driving automation. |
+| **Supervised learning** | Learning from labeled examples. |
+| **Test set** | Data kept separate to measure final performance. |
+| **Training** | Adjusting a model's parameters using data. |
+| **Transformer** | A neural network design that handles sequences, such as text, using attention. |
+| **Underfitting** | When a model is too simple to capture the pattern. |
+| **Unsupervised learning** | Finding structure in unlabeled data. |
+| **Validation set** | Data used to tune a model during development. |
+
+---
+
+# References
+
+*(Verify page numbers, editions, and URLs against the copies you use before final submission. Diagrams and tables in this module are original works created for this module.)*
+
+- Brown, T., et al. (2020). Language models are few-shot learners. *Advances in Neural Information Processing Systems, 33*.
+- Buolamwini, J., & Gebru, T. (2018). Gender shades: Intersectional accuracy disparities in commercial gender classification. *Proceedings of Machine Learning Research, 81*, 77–91.
+- European Union. (2024). *Regulation (EU) 2024/1689 (Artificial Intelligence Act).*
+- Goodfellow, I., Bengio, Y., & Courville, A. (2016). *Deep Learning.* MIT Press.
+- Jumper, J., et al. (2021). Highly accurate protein structure prediction with AlphaFold. *Nature, 596*, 583–589.
+- Krizhevsky, A., Sutskever, I., & Hinton, G. (2012). ImageNet classification with deep convolutional neural networks. *Advances in Neural Information Processing Systems, 25*.
+- Lam, R., et al. (2023). Learning skillful medium-range global weather forecasting. *Science, 382*(6677), 1416–1421.
+- Lewis, P., et al. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. *Advances in Neural Information Processing Systems, 33*.
+- Lighthill, J. (1973). *Artificial Intelligence: A General Survey.* Science Research Council, UK.
+- McCarthy, J., Minsky, M., Rochester, N., & Shannon, C. (2006). A proposal for the Dartmouth Summer Research Project on Artificial Intelligence, August 31, 1955. *AI Magazine, 27*(4), 12–14.
+- Minsky, M., & Papert, S. (1969). *Perceptrons.* MIT Press.
+- Mitchell, T. (1997). *Machine Learning.* McGraw-Hill.
+- National Highway Traffic Safety Administration (NHTSA). (n.d.). *Automated vehicles for safety.* U.S. Department of Transportation. https://www.nhtsa.gov
+- National Institute of Standards and Technology (NIST). (2023). *Artificial Intelligence Risk Management Framework (AI RMF 1.0).* NIST AI 100-1.
+- Ouyang, L., et al. (2022). Training language models to follow instructions with human feedback. *Advances in Neural Information Processing Systems, 35*.
+- Rumelhart, D., Hinton, G., & Williams, R. (1986). Learning representations by back-propagating errors. *Nature, 323*, 533–536.
+- Russell, S. (2019). *Human Compatible: Artificial Intelligence and the Problem of Control.* Viking.
+- Russell, S., & Norvig, P. (2021). *Artificial Intelligence: A Modern Approach* (4th ed.). Pearson.
+- SAE International. (2021). *Taxonomy and Definitions for Terms Related to Driving Automation Systems for On-Road Motor Vehicles* (J3016_202104).
+- Silver, D., et al. (2016). Mastering the game of Go with deep neural networks and tree search. *Nature, 529*, 484–489.
+- Turing, A. M. (1950). Computing machinery and intelligence. *Mind, 59*(236), 433–460.
+- Vaswani, A., et al. (2017). Attention is all you need. *Advances in Neural Information Processing Systems, 30*.
+- Weizenbaum, J. (1966). ELIZA: A computer program for the study of natural language communication between man and machine. *Communications of the ACM, 9*(1), 36–45.
+
+---
+
+*Module version: Draft 1. Section 5 is fully developed; Sections 7–13 are scheduled for expansion with worked examples and activities.*
